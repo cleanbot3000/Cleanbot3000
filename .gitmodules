@@ -1,1 +1,4 @@
 
+[submodule "Systems/ROS_Packages/cleanbot_package"]
+	path = Systems/ROS_Packages/cleanbot_package
+	url = git@github.com:cleanbot3000/cleanbot_package.git
