@@ -1,2 +1,2 @@
 ## Systems Folder
-[ROS_Packages](Cleanbot3000/Systems/ROS_Packages) contains the [cleanbot_package](Cleanbot3000/Systems/ROS_Packages/cleanbot_package) and sht40 temp sensor
+[ROS_Packages](Systems/ROS_Packages) contains the [cleanbot_package](Systems/ROS_Packages/cleanbot_package) and [sht40_temp_controller](Systems/ROS_Packages/sht40_temp_controller) packages. The cleanbot_package contains two main branches, master (ROS1), and mikel/ros2 (ROS2). Both branches are at the same stage of development with having the cleanbot model, LiDAR, and SLAM functioning.
