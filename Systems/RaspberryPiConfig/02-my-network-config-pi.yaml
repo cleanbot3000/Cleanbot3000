@@ -1,0 +1,26 @@
+network:
+  version: 2
+  renderer: NetworkManager
+
+  wifis:
+    wlan0:
+      dhcp4: no
+      addresses: [192.168.8.151/24]
+      gateway4: 192.168.8.1
+      nameservers:
+        addresses: [191.168.8.1]
+      access-points:
+        "PocketROS":
+          password: "cleanbot3000"
+        "PocketROS-5G":
+          password: "cleanbot3000"
+        # "PocketROS-2.4G":
+        #   password: "cleanbot3000"
+
+#In order to make changes, text editor must be given admin privileges i.e. sudo vim 02-my-network-config-pi.yaml
+
+#to apply changes
+#sudo netplan generate
+#sudo netplan apply
+
+
