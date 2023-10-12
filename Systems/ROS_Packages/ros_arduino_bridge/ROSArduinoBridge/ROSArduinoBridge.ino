@@ -247,6 +247,17 @@ int runCommand() {
 
 /* Setup function--runs once at startup. */
 void setup() {
+  pinMode(LEFT_MOTOR_DIR, OUTPUT);
+  pinMode(LEFT_MOTOR_SPEED, OUTPUT);
+  pinMode(RIGHT_MOTOR_DIR, OUTPUT);
+  pinMode(RIGHT_MOTOR_SPEED, OUTPUT);
+
+  pinMode(RIGHT_ENC_PIN_A, INPUT);
+  pinMode(RIGHT_ENC_PIN_B, INPUT);
+
+  pinMode(LEFT_ENC_PIN_A, INPUT);
+  pinMode(LEFT_ENC_PIN_B, INPUT);
+
   Serial.begin(BAUDRATE);
   
 // Initialize the motor controller if used */

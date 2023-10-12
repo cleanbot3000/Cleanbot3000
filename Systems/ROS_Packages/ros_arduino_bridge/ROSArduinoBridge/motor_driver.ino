@@ -77,8 +77,8 @@
       else if (reverse == 1) { analogWrite(LEFT_MOTOR_SPEED, spd); digitalWrite(LEFT_MOTOR_DIR, LOW); }
     }
     else /*if (i == RIGHT) //no need for condition*/ {
-      if      (reverse == 0) { analogWrite(RIGHT_MOTOR_SPEED, spd); digitalWrite(RIGHT_MOTOR_DIR, HIGH); }
-      else if (reverse == 1) { analogWrite(RIGHT_MOTOR_SPEED, spd); digitalWrite(RIGHT_MOTOR_DIR, LOW); }
+      if      (reverse == 0) { analogWrite(RIGHT_MOTOR_SPEED, spd); digitalWrite(RIGHT_MOTOR_DIR, LOW); }
+      else if (reverse == 1) { analogWrite(RIGHT_MOTOR_SPEED, spd); digitalWrite(RIGHT_MOTOR_DIR, HIGH); }
     }
   }
   
