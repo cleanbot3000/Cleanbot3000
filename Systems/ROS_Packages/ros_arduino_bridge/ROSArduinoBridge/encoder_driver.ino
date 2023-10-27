@@ -28,34 +28,47 @@
     else return encoders.XAxisReset();
   }
 #elif defined(ARDUINO_ENC_COUNTER)
-  volatile long left_enc_pos = 0L;
-  volatile long right_enc_pos = 0L;
-  static const int8_t ENC_STATES [] = {0,1,-1,0,-1,0,0,1,1,0,0,-1,0,-1,1,0};  //encoder lookup table
+  volatile long left_enc_pos = 0;
+  volatile long right_enc_pos = 0;
     
   /* Interrupt routine for LEFT encoder, taking care of actual counting */
-  ISR (PCINT2_vect){
-  	static uint8_t enc_last=0;
-        
-	enc_last <<=2; //shift previous state two places
-	enc_last |= (PIND & (3 << 2)) >> 2; //read the current state into lowest 2 bits
-  
-  	left_enc_pos += ENC_STATES[(enc_last & 0x0f)];
+  void left_isr(){
+  // Read the state of the two encoder channels
+  int stateA = digitalRead(LEFT_ENC_PIN_A);
+  int stateB = digitalRead(LEFT_ENC_PIN_B);
+
+//   Determine the direction of rotation
+  if (stateA != stateB) {
+    left_enc_pos++;
+  } else {
+    left_enc_pos--;
   }
+}
   
   /* Interrupt routine for RIGHT encoder, taking care of actual counting */
-  ISR (PCINT1_vect){
-        static uint8_t enc_last=0;
-          	
-	enc_last <<=2; //shift previous state two places
-	enc_last |= (PINC & (3 << 4)) >> 4; //read the current state into lowest 2 bits
-  
-  	right_enc_pos += ENC_STATES[(enc_last & 0x0f)];
+  void right_isr(){
+  // Read the state of the two encoder channels
+  // int stateA = digitalRead(RIGHT_ENC_PIN_A);
+  int stateB = digitalRead(RIGHT_ENC_PIN_B);
+
+//   Determine the direction of rotation
+  if (stateB != 1) {
+    right_enc_pos--;
+  } else {
+    right_enc_pos++;
   }
+}
   
   /* Wrap the encoder reading function */
   long readEncoder(int i) {
-    if (i == LEFT) return left_enc_pos;
-    else return right_enc_pos;
+    if (i == LEFT) {
+      return left_enc_pos;
+      
+    } else {
+      return right_enc_pos; 
+    }
+
+
   }
 
   /* Wrap the encoder reset function */
