@@ -72,14 +72,14 @@
     if (spd > 255)
       spd = 255;
     
-    if (i == LEFT) {  //if left motor
-      if      (reverse == 0) { analogWrite(LEFT_MOTOR_SPEED, spd); digitalWrite(LEFT_MOTOR_DIR, HIGH); }
-      else if (reverse == 1) { analogWrite(LEFT_MOTOR_SPEED, spd); digitalWrite(LEFT_MOTOR_DIR, LOW); }
-    }
-    else /*if (i == RIGHT) //no need for condition*/ {
-      if      (reverse == 0) { analogWrite(RIGHT_MOTOR_SPEED, spd); digitalWrite(RIGHT_MOTOR_DIR, HIGH); }
-      else if (reverse == 1) { analogWrite(RIGHT_MOTOR_SPEED, spd); digitalWrite(RIGHT_MOTOR_DIR, LOW); }
-    }
+      if (i == LEFT) {  //if left motor
+        if      (reverse == 0) { analogWrite(LEFT_MOTOR_SPEED, spd); digitalWrite(LEFT_MOTOR_DIR, LOW); }
+        else if (reverse == 1) { analogWrite(LEFT_MOTOR_SPEED, spd); digitalWrite(LEFT_MOTOR_DIR, HIGH); }
+      }
+      else /*if (i == RIGHT) //no need for condition*/ {
+        if      (reverse == 1) { analogWrite(RIGHT_MOTOR_SPEED, spd); digitalWrite(RIGHT_MOTOR_DIR, LOW); }
+        else if (reverse == 0) { analogWrite(RIGHT_MOTOR_SPEED, spd); digitalWrite(RIGHT_MOTOR_DIR, HIGH); }
+      }
   }
   
   void setMotorSpeeds(int leftSpeed, int rightSpeed) {

@@ -33,6 +33,10 @@ SetPointInfo;
 SetPointInfo leftPID, rightPID;
 
 /* PID Parameters */
+// int Kp = 1;
+// int Kd = 0;
+// int Ki = 0;
+// int Ko = 1; //output scaler - affects strength of PID output
 int Kp = 20;
 int Kd = 12;
 int Ki = 0;
