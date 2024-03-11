@@ -1,5 +1,8 @@
 {
     "configuration": "cpu=atmega2560",
     "board": "arduino:avr:mega",
-    "port": "/dev/ttyACM0"
+    "port": "/dev/ttyACM0",
+    "sketch": "ROSArduinoBridge/ROSArduinoBridge.ino",
+    "programmer": "avrispmkii",
+    "output": "build"
 }

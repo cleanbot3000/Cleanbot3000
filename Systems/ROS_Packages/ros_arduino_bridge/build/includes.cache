@@ -1,0 +1,17 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "/home/zelbot/.arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "/home/zelbot/.arduino15/packages/arduino/hardware/avr/1.8.6/variants/mega"
+  },
+  {
+    "Sourcefile": "/home/zelbot/ws/src/ros_arduino_bridge/build/sketch/ROSArduinoBridge.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]

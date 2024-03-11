@@ -1,0 +1,11 @@
+{
+  "additionalFiles": "../../..,../../..,../..,../..,../..,../..,../..,../..",
+  "builtInToolsFolders": "",
+  "compiler.optimization_flags": "",
+  "customBuildProperties": "",
+  "fqbn": "arduino:avr:mega:cpu=atmega2560",
+  "hardwareFolders": "/home/zelbot/.arduino15/packages",
+  "otherLibrariesFolders": "/home/zelbot/Arduino/libraries",
+  "runtime.ide.version": "10607",
+  "sketchLocation": "/home/zelbot/ws/src/ros_arduino_bridge/ROSArduinoBridge"
+}

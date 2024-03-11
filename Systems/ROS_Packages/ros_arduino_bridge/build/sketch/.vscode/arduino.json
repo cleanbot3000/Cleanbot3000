@@ -1,0 +1,7 @@
+#line 1 "/home/zelbot/ws/src/ros_arduino_bridge/ROSArduinoBridge/.vscode/arduino.json"
+{
+    "port": "/dev/ttyACM0",
+    "configuration": "cpu=atmega2560",
+    "board": "arduino:avr:mega",
+    "sketch": "ROSArduinoBridge.ino"
+}

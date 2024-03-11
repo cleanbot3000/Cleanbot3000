@@ -71,6 +71,7 @@ class MotorDriver(Node):
 
         print(f"Connecting to port {self.serial_port} at {self.baud_rate}.")
         self.conn = serial.Serial(self.serial_port, self.baud_rate, timeout=1.0)
+        time.sleep(2)
         print(f"Connected to {self.conn}")
         
 
